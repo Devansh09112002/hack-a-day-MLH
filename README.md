@@ -12,11 +12,9 @@
 > Stresser stresses on reducing people's stress and anxiety by providing featues like therapy, diet, diary and chat sections.
 
 You can checkout the demo video on youtube by clicking on the thumbnail below.
-<a href="https://www.youtube.com/watch?v=kYiz4qzpaZw">
+<a href="">
 <img src="https://user-images.githubusercontent.com/89806031/178891853-da0d4d10-f454-42f8-bae5-7028d52f15a4.png" >  
-</a>
-
-The site is deployed through heroku, which you can view from [here](https://stresser-on.herokuapp.com/)  
+</a> 
 
 ---
 
@@ -33,7 +31,7 @@ The site is deployed through heroku, which you can view from [here](https://stre
 ### 1. Home Page
 
 ![homeImg](https://user-images.githubusercontent.com/89806031/178814155-9a31f975-aee1-4630-9d05-29b30b14b46b.png)
-![homeImg2](https://user-images.githubusercontent.com/89806031/179440842-f424fc5d-8f25-4a0e-9b7a-6fdd8f92c091.png)
+![homeImg2]()
 
 
 ### 2. Therapy Page
