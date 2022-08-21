@@ -68,9 +68,9 @@ You can look recipes for any ingredient from the Ingredient-Box. By <b><i>Clicki
 If you struggle with stress, depression, or anxiety, keeping a journal can be a great Idea. Keep a track of your daily mood with our diary section.
 ![Diary](https://user-images.githubusercontent.com/89806031/185788720-5226f3c1-6d6b-48d5-9d6d-b77998caddad.png)
 
-
 You can also view your diary entries 📖 
-![Diary Entry](https://user-images.githubusercontent.com/89806031/185788538-8aa94afa-a7b9-4800-a239-94a657e88bff.png)
+![Diary2](https://user-images.githubusercontent.com/89806031/185788538-8aa94afa-a7b9-4800-a239-94a657e88bff.png)
+
 ---
 
 
