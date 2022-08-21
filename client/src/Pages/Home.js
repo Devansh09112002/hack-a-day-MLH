@@ -12,6 +12,7 @@ import music from "../Assets/music.webp";
 import diet from "../Assets/diet.webp";
 import diary from "../Assets/diary.webp";
 import chat from "../Assets/chat.webp";
+import survey from '../Assets/evolution-3778196_960_720.webp'
 
 import "@fontsource/abel"
 
@@ -346,12 +347,12 @@ const Home = () => {
             <Button text="Diary" link="/diary" />
           </Diary>
           <Chat>
-            <img src={chat} alt="chat" />
-            <h1>Social Activity</h1>
+            <img src={survey} alt="chat" />
+            <h1>Mental Health Survey</h1>
             <p>
-            Not only does social support help people feel less stressed, but it also improves health and decrease mortality risk. Interact with others on StressChat 👇👇
+            It is dataset of the mental health survey responses and trying to predict if a given subject will have sought mental health treatment or not in the past 👇👇
             </p>
-            <Button text="Chat" link="/chat" />
+            <Button text="Survey" link="//www.kaggle.com/code/devanshchaudhary009/mental-health-treatment-system-for-people/notebook" />
           </Chat>
         </Cure>
         <Footer />

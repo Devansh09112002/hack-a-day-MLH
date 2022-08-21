@@ -23,7 +23,7 @@ function OtpVerify() {
 	const navigate = useNavigate();
 
 	const confirmOtp = async () => {
-		const user = await JSON.parse(localStorage.getItem("chat-app-user"));
+		const user = await JSON.parse(localStorage.getItem("twilio-user"));
 		console.log(user);
 		axios
 			.post('http://localhost:8000/verifyOTP', {

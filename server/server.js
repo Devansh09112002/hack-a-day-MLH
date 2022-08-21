@@ -2,8 +2,9 @@ const dotenv = require('dotenv').config()
 const express = require('express')
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
+const mongoose = require('mongoose')
 
-// const userRoutes = require("./Routes/")
+const userRoutes = require("./Routes/userRoutes")
 // const messageRoutes = require("./Routes/messageRoutes")
 const diaryRoutes = require("./Routes/diaryRoutes")
 
@@ -27,8 +28,7 @@ app.use(express.json());
 app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
 app.use(cookieParser());
 
-// app.use("/api/auth", userRoutes);
-// app.use("/api/messages", messageRoutes);
+app.use("/api/auth", userRoutes);
 app.use("/api/diary", diaryRoutes);
 
 app.get('/', (req,res) => {
@@ -163,7 +163,11 @@ app.get('/logout', (req, res) => {
 		.send('logout');
 });
 
-
-app.listen((8000), () => {
-    console.log(`Listening on port 8000`);
+mongoose
+  .connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() =>
+  server = app.listen(8000, () => {
+    console.log(`Listening to PORT:- 8000`);
 })
+  )
+  .catch((error) => console.log(error.message));

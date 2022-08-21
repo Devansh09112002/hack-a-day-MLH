@@ -5,7 +5,7 @@
 *{
     padding: 0;
     margin: 0;
-    
+    /* overflow-x: hidden; */
 }
 
 .background{
@@ -17,9 +17,9 @@
 }
 
 .container{
-    height: 400px;
-    width: 400px;
-    background-image: linear-gradient(135deg, #1e88e5, #0d47a1);
+    /* height: 400px; */
+    /* width: 400px; */
+    /* background-image: linear-gradient(135deg, #1e88e5, #0d47a1); */
     background-color: #f7f7f7;
     border-radius: 15px;
 
@@ -32,27 +32,32 @@
     font-size: 3rem;
     margin-top: 1rem;
 }
-.input_container{
+/* .input_container{
     display: grid;
     place-items: center;
     
-}
+} */
+
 .input_text{
     font-family: 'Open Sans', sans-serif;
     font-size: 1.5rem;
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
     margin-left: 17px;
     
 }
+
 .input{
     width: 90%;
     height: 40px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: 'Open Sans', sans-serif;
     border: 2px solid black;
-    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     border-radius: 5px;
+    margin-left: 17px;
     background-color: none;
+    padding-left: 0.5rem;
+    margin-right: 1rem;
 }
 
 .submit {
@@ -68,6 +73,7 @@
     float: right;
     outline: none;
     cursor: pointer;
+    margin-bottom: 1rem;
 }
 .back {
     margin-left: 17px;

@@ -1,31 +1,42 @@
 import React, { useState } from "react";
 import styles from "../styles/style.module.css";
 import axios from "axios";
-import styled from 'styled-components'
+// import styled from 'styled-components'
 import { useNavigate } from "react-router-dom";
+// import { use } from "../../../server/Routes/userRoutes";
 
 
 function PhoneInput() {
 
   const [userDetails, setUserDetails] = useState({
-	name: "Ravi",
-	email: "ravi@hbam.in",
-	phone: "",
-	hash: "",
+	name: "",
+	email: "",
+  phone: ''
   })
 
   const navigate = useNavigate();
 
-  const Continue = (e) => {
+
+
+  const Continue = async (e) => {
+  axios.post("http://localhost:8000/api/auth/register", {
+      username: userDetails.name,
+      email: userDetails.email
+  }).then(function(res) {
+    console.log(res.data.user);
+    // console.log(userDetails);
+    localStorage.setItem("stresser-user", JSON.stringify(res.data.user));
     axios
       .post("http://localhost:8000/sendOTP", {
         phone: userDetails.phone,
       })
       .then(function (res) {
         console.log(res.data.otp);
-		    localStorage.setItem("chat-app-user", JSON.stringify(res.data));
+		    localStorage.setItem("twilio-user", JSON.stringify(res.data));
         navigate("/otpverify");
       });
+  })
+  
     e.preventDefault();
   };
 
@@ -33,9 +44,12 @@ function PhoneInput() {
     <div className={styles}>
       <div className={styles.background}>
         <div className={styles.container}>
-          <div className={styles.heading}>PixCase</div>
+          <div className={styles.heading}>Stresser</div>
+            <div className={styles.input_text}>Name:</div>
+            <input type="text"  placeholder="Enter your Name" className={styles.input} value={userDetails.name} onChange={(e) => setUserDetails({...userDetails, name: e.target.value})} />
+            <div className={styles.input_text}>Email</div>
+            <input type="email" placeholder="Enter your Mail" className={styles.input} value={userDetails.email} onChange={(e) => setUserDetails({...userDetails, email: e.target.value})} />
             <div className={styles.input_text}>Phone number:</div>
-            <div className={styles.input_container}>
               <input
                 type="tel"
                 value={userDetails.phone}
@@ -43,28 +57,12 @@ function PhoneInput() {
                 placeholder="Enter the Phone No."
                 className={styles.input}
               />
-            </div>
             <button onClick={Continue} className={styles.submit}>
               Send OTP
             </button>
           </div>
         </div>
       </div>
-	// <Section>
-	// <Form>
-	// <form onSubmit={Continue}>
-	// <input type="text" name="" id="" placeholder="Enter your name" />
-	// <input type="email" name="" id="" placeholder="Enter your Email" />
-	// <div>
-	// <span>Are you a Doctor ?</span>
-	// <input type="radio" name="" id="" placeholder="Yes" />
-	// <input type="radio" name="" id="" placeholder="No" />
-	// </div>
-	// <input type="text" value={value.phone} onChange={handleChange("phone")} placeholder="Enter your Phone Number"  />
-	// <button type="submit" >Send OTP</button>
-	// </form>
-	// </Form>
-	// </Section>
   );
 }
 

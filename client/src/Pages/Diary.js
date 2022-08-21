@@ -175,17 +175,17 @@ const Diary = () => {
       toast.error("You should write about today's experience", toastOptions);
       e.preventDefault();
     }
-    // async function postData() {
-    //   console.log(diaryEntry);
-    //   const user = await JSON.parse(localStorage.getItem("chat-app-user"));
-    //   await axios.post(postDiaryEntryRoute, {
-    //     userId: user._id,
-    //     title,
-    //     day,
-    //     body,
-    //   });
-    // }
-    // postData();
+    async function postData() {
+      console.log(diaryEntry);
+      const user = await JSON.parse(localStorage.getItem("stresser-user"));
+      await axios.post('http://localhost:8000/api/diary/entry', {
+        userId: user._id,
+        title,
+        day,
+        body,
+      });
+    }
+    postData();
     setDiaryEntry({
       title: "",
       day: "",
@@ -193,15 +193,15 @@ const Diary = () => {
     });
   };
 
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     const user = await JSON.parse(localStorage.getItem("chat-app-user"));
-  //     const data = await axios.get(`${getAllEntriesRoute}/${user._id}`);
-  //     console.log(data.data);
-  //     setEntries(data.data);
-  //   }
-  //   fetchData();
-  // }, []);
+  useEffect(() => {
+    async function fetchData() {
+      const user = await JSON.parse(localStorage.getItem("stresser-user"));
+      const data = await axios.get(`http://localhost:8000/api/diary/entry/${user._id}`);
+      console.log(data.data);
+      setEntries(data.data);
+    }
+    fetchData();
+  }, []);
 
   return (
     <>

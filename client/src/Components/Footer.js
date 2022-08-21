@@ -50,10 +50,7 @@ const Footer = () => {
   return (
     <Section>
     <Text>
-    Made with 💖 by 
-    <Link to="//garvits-portfolio-on.netlify.app/" target="_blank" >
-    Garvit
-    </Link>
+    Made with 💖 for MLH
     </Text>
     </Section>
   );
