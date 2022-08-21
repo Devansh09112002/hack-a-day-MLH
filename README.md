@@ -4,7 +4,7 @@
 <h3 align="center"> Short Brief </h3>
 
 <p align="center">
- Stresser is a web application to help people reduce stress and anxiety. The web application itself contains clean and interactive UI/UX making it easier to navigate. We provide features such as therapy where you can watch calm and relaxing music, yoga and meditation videos, traditional methods to reduce stress and more. We also provide a diet section where you can search recipes for any ingredient. The application also contains user authentication through login/sign-up feature. After signing-up, a user can create his/her own diary. We also have included a Ml survey .....
+ Stresser is a web application to help people reduce stress and anxiety. The web application itself contains clean and interactive UI/UX making it easier to navigate. We provide features such as therapy where you can watch calm and relaxing music, yoga and meditation videos, traditional methods to reduce stress and more. We also provide a diet section where you can search recipes for any ingredient. The application also contains user authentication through login/sign-up feature. After signing-up, a user can create his/her own diary. We also have included a Ml survey which predict whether the person has sought mental health treatment in the past or not. We have used the kaggle dataset from a 2014 survey on the people of a tech hub. We have used tensorflow and neural network.
   </p>
 
 # ✊ About
