@@ -18,7 +18,20 @@ You can checkout the demo video on youtube by clicking on the thumbnail below.
 
 ---
 
+# 🙆‍♂️ Inspiration
 
+In this modern age we see a huge number of people suffering from anxiety and depression. Stress symptoms can affect our body, our thoughts and feelings, and our behavior. Being able to recognize common stress symptoms can help us manage them. Stress that's left unchecked can contribute to many health problems, such as high blood pressure, heart disease, obesity and diabetes. Depression is a mood disorder that causes a persistent feeling of sadness and loss of interest. It affects how you feel, think and behave and can lead to a variety of emotional and physical problems. We have made 'Stresser' which is a web application to help people reduce stress and anxiety.
+
+# What it does 
+
+
+The web application itself contains clean and interactive UI/UX making it easier to navigate. We provide features such as therapy where you can watch calm and relaxing music, yoga and meditation videos, traditional methods to reduce stress and more. We also provide a diet section where you can search recipes for any ingredient. The application also contains user authentication through login/sign-up feature. After signing-up, a user can create his/her own diary. We have also integrated a ML survey in the web which predict if a given subject have sought mental health treatment or not.
+
+# How we built it
+
+We have used React for front-end and node.js and exress for back-end. We have used Recipe API from Edamam. MongoDb and mongoose are used as a database. We have created Password based Authentication through twilio sms services. We have made a mental health survey responses and try to predict if a given subject will have sought mental health treatment or not. We have used TensorFlow neural network to make our predictions.
+
+# 
 
 
 # 🖼️ Some Glimpse of the Site
