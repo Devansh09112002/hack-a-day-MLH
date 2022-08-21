@@ -3,6 +3,10 @@ const express = require('express')
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 
+// const userRoutes = require("./Routes/")
+// const messageRoutes = require("./Routes/messageRoutes")
+const diaryRoutes = require("./Routes/diaryRoutes")
+
 
 const accountSid = process.env.ACCOUNT_SID;
 const authToken = process.env.AUTH_TOKEN;
@@ -22,6 +26,10 @@ app.use(express.json());
 
 app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
 app.use(cookieParser());
+
+// app.use("/api/auth", userRoutes);
+// app.use("/api/messages", messageRoutes);
+app.use("/api/diary", diaryRoutes);
 
 app.get('/', (req,res) => {
     res.send('Hello')

@@ -1,8 +1,6 @@
-import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home';
 import auth from './Components/Auth'
-import StepForm from './Pages/StepForm';
 import PhoneInput from './Pages/phoneInput';
 import OtpVerify from './Pages/otpVerify';
 import Therapy from './Pages/Therapy';
@@ -17,8 +15,11 @@ function App() {
     <BrowserRouter>
     <Routes>
     {
-      auth.isAuthenticated() ? <Route path='/login' element={<StepForm/>} /> : <Route path='/' element={<Home/>} />
+      auth.isAuthenticated() ? <Route path='/' element={<Home/>} /> : <Route path='/login' element={<PhoneInput/>} />
     }
+    <Route path='/' element={<Home/>} />
+    <Route path='/login' element={<PhoneInput/>} />
+    <Route path='/otpverify' element={<OtpVerify/>} />
     <Route path='/therapy' element={<Therapy/>} />
     <Route path='/diet' element={<Diet/>} />
     <Route path='/diary' element={<Diary/>} />

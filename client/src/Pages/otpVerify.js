@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import styles from '../styles/style.module.css';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
-function OtpVerify(props) {
+function OtpVerify() {
 	
 	axios.defaults.withCredentials = true;
 
@@ -10,24 +11,31 @@ function OtpVerify(props) {
 		error: '',
 		success: ''
 	});
-	const { value, handleChange } = props;
+	// const { value, handleChange } = props;
 
-	const back = (e) => {
-		e.preventDefault();
-		props.prevStep();
-	};
+	const [userOtp, setuserOtp] = useState('')
 
-	const confirmOtp = () => {
+	// const back = (e) => {
+	// 	e.preventDefault();
+	// 	props.prevStep();
+	// };
+
+	const navigate = useNavigate();
+
+	const confirmOtp = async () => {
+		const user = await JSON.parse(localStorage.getItem("chat-app-user"));
+		console.log(user);
 		axios
 			.post('http://localhost:8000/verifyOTP', {
-				phone: `${value.phone}`,
-				hash: `${value.hash}`,
-				otp: `${value.otp}`,
+				phone: user.phone,
+				hash: user.hash,
+				otp: userOtp,
 				withCredentials: true
 			})
 			.then(function(res) {
 				console.log(res.data);
-				window.location.reload();
+				navigate('/')
+				// window.location.reload();
 			})
 			.catch(function(error) {
 				console.log(error.response.data);
@@ -46,13 +54,13 @@ function OtpVerify(props) {
 					<div className={styles.input_container}>
 						<input
 							type="tel"
-							value={value.otp}
-							onChange={handleChange('otp')}
+							value={userOtp}
+							onChange={(e) => setuserOtp(e.target.value)}
 							placeholder="Enter the 6 digits OTP"
 							className={styles.input}
 						/>
 					</div>
-					<button onClick={back} className={styles.back}>
+					<button className={styles.back}>
 						Back
 					</button>
 					<button onClick={confirmOtp} className={styles.submit}>

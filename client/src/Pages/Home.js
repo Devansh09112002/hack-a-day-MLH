@@ -19,6 +19,7 @@ const Section = styled.div`
   width: 100%;
   min-height: calc(100vh - 4rem);
   background-color: aliceblue;
+  overflow-x: hidden;
 
   display: flex;
   flex-direction: column;

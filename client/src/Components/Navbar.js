@@ -8,6 +8,8 @@ import "@fontsource/amita"
 const Section = styled.section`
   width: 100vw;
   background-color: #080420;
+  overflow: hidden;
+  box-sizing: border-box;
 `;
 
 const Nav = styled.nav`

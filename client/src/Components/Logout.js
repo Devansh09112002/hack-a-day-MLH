@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { BiPowerOff } from 'react-icons/bi'
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Button = styled.button`
  display: flex;
@@ -29,6 +30,8 @@ const Button = styled.button`
 
 
 const Logout = () => {
+
+  const navigate = useNavigate()
     
     axios.defaults.withCredentials = true;
     const handleClick = () => {
@@ -36,11 +39,12 @@ const Logout = () => {
         .get('http://localhost:8000/logout')
         .then((res) => {
             console.log(res.data);
+            navigate('/login')
         })
         .catch((err) => {
             console.log(err.response);
         });
-    window.location.reload();
+    // window.location.reload();
     }
 
   return (
