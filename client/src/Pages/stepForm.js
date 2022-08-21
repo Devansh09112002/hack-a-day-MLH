@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PhoneInput from './phoneInput';
 import Otpverify from './otpVerify';
+
 const StepForm = () => {
 
 	const [ state, setState ] = useState({

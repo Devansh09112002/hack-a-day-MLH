@@ -2,16 +2,16 @@ import React, { useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { useNavigate } from "react-router-dom";
 
-import Navbar from "../Components/NavbarComponents/Navbar";
-import Button from "../Components/HomeComponents/Button";
-import Footer from "../Components/HomeComponents/Footer";
+import Navbar from "../Components/Navbar";
+import Button from "../Components/Button";
+import Footer from "../Components/Footer";
 
-import img1 from "../assets/HomeAssets/stress1.webp";
-import img2 from "../assets/HomeAssets/anxiety-control.webp";
-import music from "../assets/HomeAssets/music.webp";
-import diet from "../assets/HomeAssets/diet.webp";
-import diary from "../assets/HomeAssets/diary.webp";
-import chat from "../assets/HomeAssets/chat.webp";
+import img1 from "../Assets/stress1.webp";
+import img2 from "../Assets/anxiety-control.webp";
+import music from "../Assets/music.webp";
+import diet from "../Assets/diet.webp";
+import diary from "../Assets/diary.webp";
+import chat from "../Assets/chat.webp";
 
 import "@fontsource/abel"
 
@@ -293,13 +293,13 @@ const Chat = styled.div`
 
 const Home = () => {
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  useEffect(() => {
-    if (!localStorage.getItem("chat-app-user")) {
-      navigate("/login");
-    }
-  }, [navigate])
+  // useEffect(() => {
+  //   if (!localStorage.getItem("chat-app-user")) {
+  //     navigate("/login");
+  //   }
+  // }, [navigate])
   
   return (
     <>

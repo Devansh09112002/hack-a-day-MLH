@@ -4,12 +4,12 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import Navbar from "../Components/NavbarComponents/Navbar";
-import DiaryEntry from "../Components/DiaryComponents/DiaryEntry";
-import { postDiaryEntryRoute, getAllEntriesRoute } from "../Utils/APIRoutes";
-import griningFace from "../assets/DiaryAssets/GriningFace.png";
-import excitedFace from "../assets/DiaryAssets/ExcitedFace.png";
-import sadFace from "../assets/DiaryAssets/SadFace.png";
+import Navbar from "../Components/Navbar";
+import DiaryEntry from "../Components/DiaryEntry";
+// import { postDiaryEntryRoute, getAllEntriesRoute } from "../Utils/APIRoutes";
+import griningFace from "../Assets/GriningFace.png";
+import excitedFace from "../Assets/ExcitedFace.png";
+import sadFace from "../Assets/SadFace.png";
 
 
 const Section = styled.div`
@@ -175,17 +175,17 @@ const Diary = () => {
       toast.error("You should write about today's experience", toastOptions);
       e.preventDefault();
     }
-    async function postData() {
-      console.log(diaryEntry);
-      const user = await JSON.parse(localStorage.getItem("chat-app-user"));
-      await axios.post(postDiaryEntryRoute, {
-        userId: user._id,
-        title,
-        day,
-        body,
-      });
-    }
-    postData();
+    // async function postData() {
+    //   console.log(diaryEntry);
+    //   const user = await JSON.parse(localStorage.getItem("chat-app-user"));
+    //   await axios.post(postDiaryEntryRoute, {
+    //     userId: user._id,
+    //     title,
+    //     day,
+    //     body,
+    //   });
+    // }
+    // postData();
     setDiaryEntry({
       title: "",
       day: "",
@@ -193,15 +193,15 @@ const Diary = () => {
     });
   };
 
-  useEffect(() => {
-    async function fetchData() {
-      const user = await JSON.parse(localStorage.getItem("chat-app-user"));
-      const data = await axios.get(`${getAllEntriesRoute}/${user._id}`);
-      console.log(data.data);
-      setEntries(data.data);
-    }
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const user = await JSON.parse(localStorage.getItem("chat-app-user"));
+  //     const data = await axios.get(`${getAllEntriesRoute}/${user._id}`);
+  //     console.log(data.data);
+  //     setEntries(data.data);
+  //   }
+  //   fetchData();
+  // }, []);
 
   return (
     <>

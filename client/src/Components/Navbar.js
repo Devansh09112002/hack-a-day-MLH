@@ -86,9 +86,6 @@ const Navbar = () => {
           <MenuItem>
             <Link to="/diary">Diary</Link>
           </MenuItem>
-          <MenuItem>
-            <Link to="/chat">Chat</Link>
-          </MenuItem>
           <Logout/>
         </Menu>
       </Nav>

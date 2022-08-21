@@ -27,7 +27,7 @@
     margin: auto;
     height: 400px;
     width: 500px;
-    background-image: url('../../img/home.svg');
+    /* background-image: url('../../img/home.svg'); */
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
