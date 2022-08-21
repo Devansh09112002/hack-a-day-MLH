@@ -73,3 +73,12 @@ You can also view your diary entries 📖
 ![Diary Entry](https://user-images.githubusercontent.com/89806031/185788538-8aa94afa-a7b9-4800-a239-94a657e88bff.png)
 ---
 
+
+### 4. Auth Pages
+
+We have used twilio for OTP-based authentication
+![Auth1](https://user-images.githubusercontent.com/89806031/185789009-cbdf6ee5-b608-4d15-a233-24115a024d73.png)
+![Auth2](https://user-images.githubusercontent.com/89806031/185789087-be34ba36-8bba-433e-8761-a11db5edaef7.png)
+
+---
+
