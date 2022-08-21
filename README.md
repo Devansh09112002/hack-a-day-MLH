@@ -61,6 +61,6 @@ If you struggle with stress, depression, or anxiety, keeping a journal can be a 
 
 
 You can also view your diary entries 📖 
-
+![Diary Entry](https://user-images.githubusercontent.com/89806031/185788538-8aa94afa-a7b9-4800-a239-94a657e88bff.png)
 ---
 
