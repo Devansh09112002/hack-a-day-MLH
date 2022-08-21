@@ -31,7 +31,7 @@ You can checkout the demo video on youtube by clicking on the thumbnail below.
 ### 1. Home Page
 
 ![homeImg](https://user-images.githubusercontent.com/89806031/178814155-9a31f975-aee1-4630-9d05-29b30b14b46b.png)
-![homeImg2]()
+![HomePage](https://user-images.githubusercontent.com/89806031/185788782-37f3da5b-3921-404a-a6a5-3e4c499f7bd1.png)
 
 
 ### 2. Therapy Page
@@ -58,6 +58,7 @@ You can look recipes for any ingredient from the Ingredient-Box. By <b><i>Clicki
 ### 4. Diary Page
 
 If you struggle with stress, depression, or anxiety, keeping a journal can be a great Idea. Keep a track of your daily mood with our diary section.
+![Diary](https://user-images.githubusercontent.com/89806031/185788720-5226f3c1-6d6b-48d5-9d6d-b77998caddad.png)
 
 
 You can also view your diary entries 📖 
