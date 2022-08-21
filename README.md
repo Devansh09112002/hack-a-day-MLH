@@ -58,11 +58,9 @@ You can look recipes for any ingredient from the Ingredient-Box. By <b><i>Clicki
 ### 4. Diary Page
 
 If you struggle with stress, depression, or anxiety, keeping a journal can be a great Idea. Keep a track of your daily mood with our diary section.
-![diaryImg1](https://user-images.githubusercontent.com/89806031/183259613-e0f0840f-7028-448a-8037-d1b573bc4cbf.png)
+
 
 You can also view your diary entries 📖 
-![diaryImg2](https://user-images.githubusercontent.com/89806031/183259724-351be00c-0555-4406-9bf5-639f0ff49a59.png)
-
 
 ---
 
