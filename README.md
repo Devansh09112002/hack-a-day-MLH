@@ -21,11 +21,6 @@ You can checkout the demo video on youtube by clicking on the thumbnail below.
 
 
 
-
-
-
-
-]
 # 🖼️ Some Glimpse of the Site
 
 ### 1. Home Page
